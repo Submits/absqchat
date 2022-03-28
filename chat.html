@@ -89,10 +89,6 @@ button:hover {
   </body>
 </html>
 <main>
-    <div style="position: absolute; top: 0; left: 0; margin-left: 7px;">
-        <button onclick="leave()" style="font-size: 14px;">Leave Room</button><br>
-        <button onclick="logOut()" style="font-size: 14px;">Log Out</button>
-    </div>
   <header>
     <div id="roomId" class="user-count">0</div>
     <h1>absq.xyz</h1>
@@ -105,6 +101,8 @@ button:hover {
   <div>
     <input id="message" type="text" placeholder="Enter a message..." />
     <button onclick="sendMessage()">Send</button>
+    <button onclick="leave()" >Leave Room</button>
+        <button onclick="logOut()">Log Out</button>
   </div>
 
 
