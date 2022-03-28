@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400&display=swap');
+
+body{
+    font-family: 'Roboto';
+    background-color: #111112;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    color: white;
+}
+
+.container {
+	width: 100%;
+	max-width: 100%;
+	margin-top: 130px;
+	margin-bottom: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #252526
+}
+::-webkit-scrollbar-track {
+    background: #303031
+}
+
+
+.item {
+	max-width: 600px;
+	flex-basis: 400px;
+	padding: 17px;
+	border-radius: 10px;
+	background-color: #232324;
+	word-break: break-all;
+	color: var(--white);
+    font-size: 15px;
+	position: relative;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    line-height: 1.7;
+
+}
+
+.highlight{
+    float: right;
+}
+
+.navbar {
+	overflow: hidden;
+	background-color: #202225;
+	position: fixed;
+	top: 0;
+	width: 100%;
+    text-align: center;
+    z-index: 999;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  * {
+	margin: 0;
+
+}
+
+.navbar label {
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	font-size: 23px;
+  }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+		<label id="title"></label><br><br>
+        <hr style="width: 25%; margin: auto;"><br>
+        <p id="clicks">Total Clicks: Loading...</p>
+        <p id="display">Display Message: Loading...</p>
+		  </div>
+        <div class="container" id="logs">
+        </div> 
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
+ <script src="webSocket.js"></script>
+</html>
