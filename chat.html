@@ -1,0 +1,111 @@
+<!-- ./public/index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>absq.xyz</title>
+    <script src="https://cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
+    <script src="chatHandler.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+* {
+  box-sizing: border-box;
+  transition: all .3s ease;
+}
+
+@font-face {
+    font-family: 'Akkurat Moni';
+    src: url("https://z.zz.fo/9qqpA.otf") format("opentype");
+}
+
+html, body {
+  background: #eee;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: calc(100% - 20px);
+  max-width: 700px;
+  margin: 0 auto;
+  font-family: 'Akkurat Moni';
+}
+
+h1, .user-count {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 32px;
+}
+
+.user-count {
+  float: right;
+}
+
+.chat {
+  content: '';
+  width: 100%;
+  height: calc(100vh - 165px);
+  background: white;
+  padding: 5px 10px;
+}
+
+.chat p {
+  margin: 0 0 5px 0;
+}
+
+input, button {
+  width: 100%;
+  font: inherit;
+  background: #fff;
+  border: none;
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #ddd;
+}
+
+@media all and (min-width: 500px) {
+  .chat {
+    height: calc(100vh - 140px);
+  }
+  input {
+    width: calc(100% - 160px);
+  }
+  button {
+    float: right;
+    width: 150px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+
+  </body>
+</html>
+<main>
+    <div style="position: absolute; top: 0; left: 0; margin-left: 7px;">
+        <button onclick="leave()" style="font-size: 14px;">Leave Room</button><br>
+        <button onclick="logOut()" style="font-size: 14px;">Log Out</button>
+    </div>
+  <header>
+    <div id="roomId" class="user-count">0</div>
+    <h1>absq.xyz</h1>
+  </header>
+
+  <section id="chat" class="chat">
+  </section>
+
+  
+  <div>
+    <input id="message" type="text" placeholder="Enter a message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+
+</main>

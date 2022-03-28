@@ -1,0 +1,48 @@
+<html>
+  <head>
+      <title>absq.xyz</title>
+    <style>
+
+@font-face {
+    font-family: 'Akkurat Moni';
+    src: url("https://z.zz.fo/9qqpA.otf") format("opentype");
+}
+
+
+body{
+    font-family: 'Akkurat Moni';
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+
+
+button{
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-family: 'Akkurat Moni';
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+    </style>
+  </head>
+  <body onload="getAllRooms()">
+      <h1>Joinable Rooms</h1>
+      <div id="rooms">
+        
+      </div>
+      <hr style="width: 40%; text-align: center; margin: auto;">
+      <h2>Create</h2>
+      <button onclick="createRoom()">Create Room</button>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
+ <script src="roomHandler.js"></script>
+</html>

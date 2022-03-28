@@ -1,0 +1,73 @@
+<html>
+  <head>
+      <title>absq.xyz</title>
+    <style>
+
+@font-face {
+    font-family: 'Akkurat Moni';
+    src: url("https://z.zz.fo/9qqpA.otf") format("opentype");
+}
+
+@keyframes slideInFromTop{
+    0% {
+        transform: translateY(-20%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+body{
+    font-family: 'Akkurat Moni';
+    position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+h1{
+  text-align: center;
+}
+
+.composeDiv{
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+
+.div{
+    animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+button{
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+      <div class="div">
+    <h1>Sign Up or Log In</h1>
+    <label>Username</label><br>
+    <input id="username" style="width: 100%; font-family: 'Akkurat Moni';" type="text"><br><br>
+    <label>Password</label><br>
+    <input id="password" style="width: 100%; font-family: 'Akkurat Moni';" type="password"><br><br>
+    <button onclick="signUp()" style="font-family: 'Akkurat Moni';">Sign Up</button>
+    <button onclick="logIn()" style="font-family: 'Akkurat Moni';">Log In</button>
+</div>
+</body>
+  <script src="https://cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
+ <script src="accountHandler.js"></script>
+</html>
